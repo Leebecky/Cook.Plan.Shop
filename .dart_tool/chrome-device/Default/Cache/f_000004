@@ -1,0 +1,345 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/cookbook_planner/Screens/planner.dart', 'packages/cookbook_planner/Screens/bookshelf.dart', 'packages/cookbook_planner/Screens/shopping_list.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/bottom_navigation_bar_item.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart'], (function load__packages__cookbook_planner__Screens__navigations_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__cookbook_planner__Screens__planner$46dart, packages__cookbook_planner__Screens__bookshelf$46dart, packages__cookbook_planner__Screens__shopping_list$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__bottom_navigation_bar_item$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const planner = packages__cookbook_planner__Screens__planner$46dart.Screens__planner;
+  const bookshelf = packages__cookbook_planner__Screens__bookshelf$46dart.Screens__bookshelf;
+  const shopping_list = packages__cookbook_planner__Screens__shopping_list$46dart.Screens__shopping_list;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const bottom_navigation_bar = packages__flutter__src__material__icon_button$46dart.src__material__bottom_navigation_bar;
+  const bottom_navigation_bar_item = packages__flutter__src__widgets__bottom_navigation_bar_item$46dart.src__widgets__bottom_navigation_bar_item;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  var navigations = Object.create(dart.library);
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    BottomNavigationBarItemL: () => (T.BottomNavigationBarItemL = dart.constFn(dart.legacy(bottom_navigation_bar_item.BottomNavigationBarItem)))(),
+    JSArrayOfBottomNavigationBarItemL: () => (T.JSArrayOfBottomNavigationBarItemL = dart.constFn(_interceptors.JSArray$(T.BottomNavigationBarItemL())))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    intLTovoid: () => (T.intLTovoid = dart.constFn(dart.fnType(dart.void, [T.intL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C1() {
+      return C[1] = dart.constList([], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 13,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 37,
+        [_Location_line]: 13,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 46,
+        [_Location_line]: 13,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 23,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 25,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 11,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[9] || CT.C9], T._LocationL());
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[8] || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 24,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 34,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 34,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15], T._LocationL());
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 34,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.constList([C[18] || CT.C18], T._LocationL());
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[17] || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 35,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "items",
+        [_Location_column]: 11,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 11,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "currentIndex",
+        [_Location_column]: 11,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21, C[22] || CT.C22, C[23] || CT.C23], T._LocationL());
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 30,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 9,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 9,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bottomNavigationBar",
+        [_Location_column]: 9,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26, C[27] || CT.C27, C[28] || CT.C28], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 23,
+        [_Location_file]: "file:///D:/FlutterProjects/cookbook_planner/lib/Screens/navigations.dart"
+      });
+    }
+  }, false);
+  var C = Array(29).fill(void 0);
+  var I = ["package:cookbook_planner/Screens/navigations.dart"];
+  navigations.Navigations = class Navigations extends framework.StatefulWidget {
+    createState() {
+      return new navigations._NavigationsState.new();
+    }
+  };
+  (navigations.Navigations.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    navigations.Navigations.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = navigations.Navigations.prototype;
+  dart.addTypeTests(navigations.Navigations);
+  dart.addTypeCaches(navigations.Navigations);
+  dart.setMethodSignature(navigations.Navigations, () => ({
+    __proto__: dart.getMethods(navigations.Navigations.__proto__),
+    createState: dart.fnType(dart.legacy(navigations._NavigationsState), [])
+  }));
+  dart.setLibraryUri(navigations.Navigations, I[0]);
+  var _currentIndex = dart.privateName(navigations, "_currentIndex");
+  var _pages = dart.privateName(navigations, "_pages");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  navigations._NavigationsState = class _NavigationsState extends framework.State$(dart.legacy(navigations.Navigations)) {
+    initState() {
+      this[_currentIndex] = 1;
+      super.initState();
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: new text.Text.new("CookPlan", {$creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7}), body: this[_pages][$_get](this[_currentIndex]), bottomNavigationBar: new bottom_navigation_bar.BottomNavigationBar.new({items: T.JSArrayOfBottomNavigationBarItemL().of([new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.calendar_today, {$creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), label: "Meal Planner"}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.auto_stories, {$creationLocationd_0dea112b090073317d4: C[13] || CT.C13}), label: "Cookbooks"}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.shopping_basket, {$creationLocationd_0dea112b090073317d4: C[16] || CT.C16}), label: "Shopping List"})]), onTap: dart.fn(index => this.setState(dart.fn(() => {
+            this[_currentIndex] = index;
+          }, T.VoidToNull())), T.intLTovoid()), currentIndex: this[_currentIndex], $creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24});
+    }
+  };
+  (navigations._NavigationsState.new = function() {
+    this[_currentIndex] = null;
+    this[_pages] = T.JSArrayOfWidgetL().of([new planner.Planner.new({$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new bookshelf.Shelf.new({$creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), new shopping_list.ShoppingList.new({$creationLocationd_0dea112b090073317d4: C[3] || CT.C3})]);
+    navigations._NavigationsState.__proto__.new.call(this);
+    ;
+  }).prototype = navigations._NavigationsState.prototype;
+  dart.addTypeTests(navigations._NavigationsState);
+  dart.addTypeCaches(navigations._NavigationsState);
+  dart.setMethodSignature(navigations._NavigationsState, () => ({
+    __proto__: dart.getMethods(navigations._NavigationsState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(navigations._NavigationsState, I[0]);
+  dart.setFieldSignature(navigations._NavigationsState, () => ({
+    __proto__: dart.getFields(navigations._NavigationsState.__proto__),
+    [_currentIndex]: dart.fieldType(dart.legacy(core.int)),
+    [_pages]: dart.fieldType(dart.legacy(core.List$(dart.legacy(framework.Widget))))
+  }));
+  dart.trackLibraries("packages/cookbook_planner/Screens/navigations.dart", {
+    "package:cookbook_planner/Screens/navigations.dart": navigations
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["navigations.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAOqC;IAAmB;;;;;;EACxD;;;;;;;;;;;;;;;;;AAQqB,MAAjB,sBAAgB;AACC,MAAX;IACR;UAG0B;AACxB,YAAO,oCACK,+BACC,kBAAK,qIAER,AAAM,oBAAC,2CACQ,0DACZ,0CACL,kEACU,kBAAW,+FAAwB,kBAC7C,kEACU,kBAAW,6FAAsB,eAC3C,kEACU,kBAAW,gGAAyB,4BAEzC,QAAC,SAAU,cAAS;AACJ,YAArB,sBAAgB,KAAK;8DAET;IAEtB;;;IA9BI;IACS,eAAS,yBAAC,kFAAW,kFAAS;;;EA8B7C","file":"../../../../packages/cookbook_planner/Screens/navigations.dart.lib.js"}');
+  // Exports:
+  return {
+    Screens__navigations: navigations
+  };
+}));
+
+//# sourceMappingURL=navigations.dart.lib.js.map

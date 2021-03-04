@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import './planner.dart';
 import './shopping_list.dart';
 import './bookshelf.dart';
@@ -24,6 +25,7 @@ class _NavigationsState extends State<Navigations> {
         appBar: AppBar(
           title: Text("CookPlan"),
         ),
+        drawer: sideMenu(),
         body: _pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           items: [
@@ -40,4 +42,21 @@ class _NavigationsState extends State<Navigations> {
           currentIndex: _currentIndex,
         ));
   }
+}
+
+Widget sideMenu() {
+  return Drawer(
+    child: ListView(
+      children: [
+        ListTile(
+            title: (Get.isDarkMode) ? Text("Light Mode") : Text("Dark Mode"),
+            trailing: (Get.isDarkMode)
+                ? Icon(Icons.brightness_5)
+                : Icon(Icons.brightness_2),
+            onTap: () => Get.changeTheme(
+                  Get.isDarkMode ? ThemeData.light() : ThemeData.dark(),
+                ))
+      ],
+    ),
+  );
 }

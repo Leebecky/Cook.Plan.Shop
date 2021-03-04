@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      darkTheme: ThemeData(primarySwatch: Colors.teal),
       routes: {
         "/": (context) => Navigations(),
       },

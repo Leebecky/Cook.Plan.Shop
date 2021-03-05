@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class ShoppingList extends StatefulWidget {
@@ -11,7 +12,19 @@ class _ShoppingListState extends State<ShoppingList> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          ListView.builder(itemBuilder: (context, i) => null),
+          FutureBuilder(
+              future: FirebaseFirestore.instance
+                  .collection("Test")
+                  .doc("XewPRO4lzTbr44rgy6LI")
+                  .get(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  ListView.builder(itemBuilder: (context, i) {
+                    return ListTile();
+                  });
+                }
+                return CircularProgressIndicator();
+              }),
           FloatingActionButton(onPressed: null)
         ],
       ),

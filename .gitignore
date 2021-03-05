@@ -47,3 +47,4 @@ app.*.map.json
 .packages
 .dart_tool/package_config_subset
 .packages
+.packages~Development

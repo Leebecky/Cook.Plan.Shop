@@ -9,25 +9,35 @@ class ShoppingList extends StatefulWidget {
 class _ShoppingListState extends State<ShoppingList> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          FutureBuilder(
-              future: FirebaseFirestore.instance
-                  .collection("Test")
-                  .doc("XewPRO4lzTbr44rgy6LI")
-                  .get(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.done) {
-                  ListView.builder(itemBuilder: (context, i) {
-                    return ListTile();
-                  });
-                }
-                return CircularProgressIndicator();
-              }),
-          FloatingActionButton(onPressed: null)
-        ],
-      ),
+    return Column(
+      children: [
+        FutureBuilder(
+            future: FirebaseFirestore.instance
+                .collection("leebecky06@gmail.com")
+                .doc("Profile")
+                .get(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                return Expanded(
+                    child: ListView.builder(itemBuilder: (context, i) {
+                  return ListTile(
+                    title: Text(snapshot.data["Name"]),
+                  );
+                }));
+              }
+
+              return CircularProgressIndicator();
+            }),
+        Spacer(),
+        FloatingActionButton(
+            child: Icon(Icons.add),
+            foregroundColor:
+                Theme.of(context).floatingActionButtonTheme.foregroundColor,
+            onPressed: () {
+              final snackBar = SnackBar(content: Text("Ping!"));
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            })
+      ],
     );
   }
 }

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import './planner.dart';
-import './shopping_list.dart';
-import './bookshelf.dart';
+import 'Screens/planner.dart';
+import 'Screens/shopping_list.dart';
+import 'Screens/bookshelf.dart';
 
 class Navigations extends StatefulWidget {
   @override
   _NavigationsState createState() => _NavigationsState();
 }
 
+//^ Bottom Navigation Bar
 class _NavigationsState extends State<Navigations> {
   int _currentIndex;
   List<Widget> _pages = [Planner(), Shelf(), ShoppingList()];
@@ -44,6 +45,7 @@ class _NavigationsState extends State<Navigations> {
   }
 }
 
+//^ Sidemenu - Left drawer
 Widget sideMenu() {
   return Drawer(
     child: ListView(

@@ -8,9 +8,13 @@ class ShoppingList extends StatefulWidget {
 class _ShoppingListState extends State<ShoppingList> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-      child: Center(child: Text("Shopping")),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          ListView.builder(itemBuilder: (context, i) => null),
+          FloatingActionButton(onPressed: null)
+        ],
+      ),
     );
   }
 }

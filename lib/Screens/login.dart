@@ -25,6 +25,14 @@ class _LoginState extends State<Login> {
   }
 
   @override
+  void dispose() {
+    emailCtrl.dispose();
+    passwordCtrl.dispose();
+    super.dispose();
+  }
+
+//^ Login Page
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
@@ -41,12 +49,13 @@ class _LoginState extends State<Login> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                        padding: EdgeInsets.only(right: 20),
-                        child: Icon(
-                          Icons.menu_book_sharp,
-                          size: 50,
-                        )),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 30),
+                      child: Image(
+                        image: AssetImage("assets/logo-recipe-book.png"),
+                        height: 50,
+                      ),
+                    ),
                     Text(
                       "Cook.Plan.Shop",
                       textScaleFactor: 2.2,
@@ -88,7 +97,7 @@ class _LoginState extends State<Login> {
                           borderSide: BorderSide(color: Colors.white))),
                 ),
                 SizedBox(height: 35),
-                //~ Login
+                //~ Login button / Loading animation when authenticating
                 (isAuthenticating)
                     ? Container(
                         decoration: BoxDecoration(
@@ -127,19 +136,23 @@ class _LoginState extends State<Login> {
     } on FirebaseAuthException catch (e) {
       if (e.code == "invalid-email") {
         openDialog(context,
-            titleText: "Invalid Email", contentText: "Please check your email");
+            dialogType: CustomAlertDialog(
+                titleText: "Invalid Email",
+                contentText: "Please check your email"));
       }
       if (e.code == "wrong-password") {
         openDialog(context,
-            titleText: "Incorrect Password",
-            contentText: "Your password was incorrect! Please try again.");
+            dialogType: CustomAlertDialog(
+                titleText: "Incorrect Password",
+                contentText: "Your password was incorrect! Please try again."));
       }
 
       if (e.code == "user-not-found") {
         //! Redirect to Registration
         openDialog(context,
-            titleText: "User Not Found",
-            contentText: "No account? Join us today!");
+            dialogType: CustomAlertDialog(
+                titleText: "User Not Found",
+                contentText: "No account? Join us today!"));
       }
     } finally {
       setState(() {

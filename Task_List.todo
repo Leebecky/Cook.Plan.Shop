@@ -3,7 +3,23 @@ Login.dart:
     ✔ Authentication for login @done(21-03-06 17:06)
     ☐ Forgot password function
     ☐ Login as Guest
+    ☐ Link to other accounts: Playstore/Google/etc..
 
 Main.dart:
     ☐ Error screen - Problems connecting to Firebase
     ☐ SplashScreen/Loading Screen
+
+Models:
+    ☐ Cookbook/Recipe
+    ☐ Shopping List
+    ☐ Planner
+
+Shopping List:
+    ☐ Load data from Firestore
+    ☐ Swipe left to dismiss
+    ☐ CheckList 
+    ☐ Schedule weekly purchase
+
+Misc:
+    ☐ Reflect settings configuration
+

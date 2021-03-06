@@ -15,7 +15,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="A recipe keeper, meal planner and shopping list application.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,9 +33,11 @@
   <!--^ Firebase core -->
   <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
   <!--^ Firebase Firestore -->
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
   <!--^ Firebase Authentication -->
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  <!--^ Firebase Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
 
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
@@ -52,19 +54,20 @@
 <!-- Firebase Initialising -->
 <script>
   var firebaseConfig = {
-    apiKey: "...",
+    apiKey: "AIzaSyDd89TEdSRwibcmtCJvrZ8y8IeMlj0D9V4",
     authDomain: "cookplanshop.firebaseapp.com",
-    databaseURL: "https://cookplanshop.firebaseio.com",
     projectId: "cookplanshop",
     storageBucket: "cookplanshop.appspot.com",
-    messagingSenderId: "...",
-    appId: "1:...:web:...",
-    measurementId: "G-...",
+    messagingSenderId: "452670914181",
+    appId: "1:452670914181:web:2c580366d308df1845f3ec",
+    measurementId: "G-Q9KFN87S9W"
   };
 
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig); 
+  firebase.analytics();
 </script>
-
+<!-- Logo Attribution copyrights -->
+<div>Logo made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </body>
 </html>

@@ -19,11 +19,13 @@ class _ShoppingListState extends State<ShoppingList> {
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
                 return Expanded(
-                    child: ListView.builder(itemBuilder: (context, i) {
+                    child: ListTile(title: Text(snapshot.data["Name"]))
+                    /*   child: ListView.builder(itemBuilder: (context, i) {
                   return ListTile(
                     title: Text(snapshot.data["Name"]),
                   );
-                }));
+                }) */
+                    );
               }
 
               return CircularProgressIndicator();

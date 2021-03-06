@@ -2,6 +2,7 @@ import 'package:cookbook_planner/Screens/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'navigations.dart';
 
@@ -17,7 +18,7 @@ class Initializer extends StatelessWidget {
         future: Firebase.initializeApp(),
         builder: (context, snapshot) {
           //? Checks if Firebase has been initialised:
-          //~ If error 
+          //~ If error
           //! Return Error screen
           if (snapshot.hasError) {
             return Text("Please wait!");
@@ -29,8 +30,7 @@ class Initializer extends StatelessWidget {
             return MyApp(homeRoute);
           }
 
-          //! Else, return Loading screen
-          return CircularProgressIndicator();
+          return SpinKitPouringHourglass(color: Colors.blue[200]);
         });
   }
 }
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: "CookPlan",
+      title: "Cook.Plan.Shop",
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

@@ -34,7 +34,7 @@ dependencies:
   firebase_core: "^1.0.0"
   cloud_firestore: "^1.0.0"
   firebase_auth: "^1.0.0"
-  
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -43,6 +43,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+#App Icon
+  flutter_launcher_icons: ^0.9.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo-recipe-book.png"
+  
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -55,7 +63,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+    - assets/logo-recipe-book.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -7,3 +7,18 @@ Login.dart:
 Main.dart:
     ☐ Error screen - Problems connecting to Firebase
     ☐ SplashScreen/Loading Screen
+
+Models:
+    ☐ Cookbook/Recipe
+    ☐ Shopping List
+    ☐ Planner
+
+Shopping List:
+    ☐ Load data from Firestore
+    ☐ Swipe left to dismiss
+    ☐ CheckList 
+    ☐ Schedule weekly purchase
+
+Misc:
+    ☐ Reflect settings configuration
+

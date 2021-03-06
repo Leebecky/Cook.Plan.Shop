@@ -1,0 +1,9 @@
+Login.dart:
+    ☐ New user registration
+    ✔ Authentication for login @done(21-03-06 17:06)
+    ☐ Forgot password function
+    ☐ Login as Guest
+
+Main.dart:
+    ☐ Error screen - Problems connecting to Firebase
+    ☐ SplashScreen/Loading Screen

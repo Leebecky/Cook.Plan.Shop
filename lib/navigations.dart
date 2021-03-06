@@ -1,3 +1,5 @@
+import 'package:cookbook_planner/Screens/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Screens/planner.dart';
@@ -57,7 +59,17 @@ Widget sideMenu() {
                 : Icon(Icons.brightness_2),
             onTap: () => Get.changeTheme(
                   Get.isDarkMode ? ThemeData.light() : ThemeData.dark(),
-                ))
+                )),
+        Divider(
+          thickness: 2,
+        ),
+        ListTile(
+          title: Text("Logout"),
+          onTap: () {
+            FirebaseAuth.instance.signOut();
+            Get.to(() => Login());
+          },
+        )
       ],
     ),
   );

@@ -1,3 +1,5 @@
+import 'package:cookbook_planner/Screens/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,25 +17,28 @@ class Initializer extends StatelessWidget {
         future: Firebase.initializeApp(),
         builder: (context, snapshot) {
           //? Checks if Firebase has been initialised:
-          //~ If error
-          //TODO Error screen
+          //~ If error 
+          //! Return Error screen
           if (snapshot.hasError) {
             return Text("Please wait!");
           }
 
           //~ Once intialised, return app
           if (snapshot.connectionState == ConnectionState.done) {
-            return MyApp();
+            Widget homeRoute = checkLoggedIn();
+            return MyApp(homeRoute);
           }
 
-          //~ Else, return Loading screen
-          //TODO SplashScreen/Loading screen
+          //! Else, return Loading screen
           return CircularProgressIndicator();
         });
   }
 }
 
 class MyApp extends StatelessWidget {
+  final Widget homeRoute;
+  MyApp(this.homeRoute);
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -44,9 +49,20 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      routes: {
-        "/": (context) => Navigations(),
-      },
+      home: homeRoute,
+      /*  routes: {
+        "/": (context) => checkLoggedIn(),
+      }, */
     );
+  }
+}
+
+//? Checks if the user is logged in and returns the appropriate route
+Widget checkLoggedIn() {
+  User user = FirebaseAuth.instance.currentUser;
+  if (user == null) {
+    return Login();
+  } else {
+    return Navigations();
   }
 }

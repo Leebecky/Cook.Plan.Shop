@@ -1,2 +1,2 @@
-# cook_plan_shop
+# Cook.Plan.Shop
  A recipe keeper, meal planner and shopping list application

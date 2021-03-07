@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:452670914181:android:3de258d25e04ff4045f3ec",
+        "android_client_info": {
+          "package_name": "com.leebecky.cook_plan_shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452670914181-0svgm2d4jf9mrgid8cto44ni8t5ae0ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVOblK3x_kd70sotxP80mtk0syP1iBSDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452670914181-0svgm2d4jf9mrgid8cto44ni8t5ae0ot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:452670914181:android:cb26034f60d6370445f3ec",
         "android_client_info": {
           "package_name": "com.leebecky.cookbook_planner"

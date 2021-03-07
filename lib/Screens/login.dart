@@ -1,7 +1,7 @@
-import 'package:cookbook_planner/Custom_Widget/custom_alert_dialog.dart';
-import 'package:cookbook_planner/Custom_Widget/custom_buttons.dart';
-import 'package:cookbook_planner/Custom_Widget/custom_text_field.dart';
-import 'package:cookbook_planner/navigations.dart';
+import 'package:cook_plan_shop/Custom_Widget/custom_alert_dialog.dart';
+import 'package:cook_plan_shop/Custom_Widget/custom_buttons.dart';
+import 'package:cook_plan_shop/Custom_Widget/custom_text_field.dart';
+import 'package:cook_plan_shop/navigations.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

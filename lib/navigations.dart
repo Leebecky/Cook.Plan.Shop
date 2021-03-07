@@ -1,6 +1,6 @@
-import 'package:cookbook_planner/Custom_Widget/custom_alert_dialog.dart';
-import 'package:cookbook_planner/Models/activeUser.dart';
-import 'package:cookbook_planner/Screens/login.dart';
+import 'package:cook_plan_shop/Custom_Widget/custom_alert_dialog.dart';
+import 'package:cook_plan_shop/Models/activeUser.dart';
+import 'package:cook_plan_shop/Screens/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

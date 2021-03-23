@@ -26,7 +26,7 @@ ActiveUser _activeUserFromDb(Map<dynamic, dynamic> dbData) {
   );
 }
 
-//? Converts the ActiveUser class into key/value pairs
+//? Converts the ActiveUser object into key/value pairs
 Map<String, String> _activeUserToMap(ActiveUser instance) => <String, String>{
       "Name": instance.name,
       "Theme": instance.preferredTheme,

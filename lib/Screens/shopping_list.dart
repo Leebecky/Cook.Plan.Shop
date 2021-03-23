@@ -1,36 +1,61 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cook_plan_shop/Models/shoppingList_model.dart';
 import 'package:flutter/material.dart';
 
-class ShoppingList extends StatefulWidget {
+class ShoppingListPage extends StatefulWidget {
   @override
-  _ShoppingListState createState() => _ShoppingListState();
+  _ShoppingListPageState createState() => _ShoppingListPageState();
 }
 
-class _ShoppingListState extends State<ShoppingList> {
+class _ShoppingListPageState extends State<ShoppingListPage> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        FutureBuilder(
-            future: FirebaseFirestore.instance
-                .collection("leebecky06@gmail.com")
-                .doc("Profile")
-                .get(),
-            builder: (context, snapshot) {
+        //~ Shopping List
+        FutureBuilder<List<Map<String, ShoppingListItem>>>(
+            future: getShoppingList(),
+            builder: (context,
+                AsyncSnapshot<List<Map<String, ShoppingListItem>>> snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                return Expanded(
-                    child: ListTile(title: Text(snapshot.data["Name"]))
-                    /*   child: ListView.builder(itemBuilder: (context, i) {
-                  return ListTile(
-                    title: Text(snapshot.data["Name"]),
-                  );
-                }) */
-                    );
+                return (snapshot.data.isEmpty)
+                    ? Center(
+                        child: Text("Nothing in your shopping list yet..."),
+                      )
+                    : Expanded(
+                        child: ListView.builder(
+                            itemCount: snapshot.data.length,
+                            itemBuilder: (context, i) {
+                              //~ Variables
+                              String itemName = snapshot.data[i].keys.first;
+                              ShoppingListItem item =
+                                  snapshot.data[i].values.first;
+                              bool _bought = item.isChecked;
+
+                              return Dismissible(
+                                key: Key(itemName),
+                                onDismissed: (direction) => setState(() {
+                                  snapshot.data[i].values.toList().removeAt(i);
+                                }),
+                                direction: DismissDirection.endToStart,
+                                background: Container(
+                                  color: Colors.red,
+                                ),
+                                child: CheckboxListTile(
+                                    title: Text(itemName),
+                                    isThreeLine: true,
+                                    subtitle: Text(
+                                        "${item.amount} ${item.unit} \nNotes: ${item.notes}"),
+                                    value: _bought,
+                                    onChanged: (check) => setState(() {
+                                          _bought = check;
+                                        })),
+                              );
+                            }));
               }
 
               return CircularProgressIndicator();
             }),
-        Spacer(),
+        //~ Add New Item button
         FloatingActionButton(
             child: Icon(Icons.add),
             foregroundColor:

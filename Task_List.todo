@@ -7,7 +7,7 @@ Login.dart:
 
 Main.dart:
     ☐ Error screen - Problems connecting to Firebase
-    ☐ SplashScreen/Loading Screen
+    ✔ SplashScreen/Loading Screen @done(21-03-07 12:05)
 
 Models:
     ☐ Cookbook/Recipe
@@ -22,4 +22,6 @@ Shopping List:
 
 Misc:
     ☐ Reflect settings configuration
+        ☐ Theme - Use Shared Preferences
+        ☐ Unit - Use Shared Preferences
 

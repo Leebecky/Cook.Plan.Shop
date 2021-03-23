@@ -17,7 +17,7 @@ class Navigations extends StatefulWidget {
 class _NavigationsState extends State<Navigations> {
   int _currentIndex;
   bool _isDarkMode;
-  List<Widget> _pages = [Planner(), Shelf(), ShoppingList()];
+  List<Widget> _pages = [Planner(), Shelf(), ShoppingListPage()];
 
   @override
   void initState() {

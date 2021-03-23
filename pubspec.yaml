@@ -30,6 +30,9 @@ dependencies:
   #custom loaders
   flutter_spinkit: ^5.0.0
 
+  #Shared Preferences - for storing user related data
+  shared_preferences: ^2.0.4
+
   #Firebase Packages
   firebase_core: "^1.0.0"
   cloud_firestore: "^1.0.0"
